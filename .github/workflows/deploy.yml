@@ -32,7 +32,7 @@ jobs:
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.14/mdbook-v0.4.14-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
           echo "$(pwd)/bin" >> ${GITHUB_PATH}
       - name: Install mdbook-quiz
-        run: cargo install --path . --debug --locked
+        run: cargo install mdbook-quiz --version 0.1.3 #--path . --debug --locked
       - name: Build dl-quiz mdbook
         run: mdbook build
         working-directory: dl-quiz
