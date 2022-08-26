@@ -33,9 +33,9 @@ jobs:
           echo "$(pwd)/bin" >> ${GITHUB_PATH}
       - name: Install mdbook-quiz
         run: cargo install --path . --debug --locked
-      - name: Build example mdbook
+      - name: Build dl-quiz mdbook
         run: mdbook build
-        working-directory: example
+        working-directory: dl-quiz
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
