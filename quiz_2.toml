@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is the type of `a`?"
+prompt.choices = [
+  "`float8`",
+  "`float32`",
+  "`float64`"
+]
+answer.answer = 2
+context = """
+What else?
+"""
