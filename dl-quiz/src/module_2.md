@@ -8,3 +8,7 @@ We run the following code:
 tensor([1., 1., 1., 1., 1.], dtype=torch.float64) 
 ```
 {{#quiz quiz_2.toml}}
+
+Another one
+
+{{#quiz quiz_22.toml}}
