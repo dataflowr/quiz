@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We run the following code: <pre><code class='language-python'>print(a)\nprint(b)</code></pre>"
+prompt.choices = [
+  "`float8`",
+  "`float32`",
+  "`float64`"
+]
+answer.answer = 2
+context = """
+What else?
+"""
