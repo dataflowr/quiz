@@ -1,6 +1,6 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We run the following code: <pre><code class='language-python'>print(a)\nprint(b)</code></pre>"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ a = np.ones(5) \n $ b = trorch.from_numpy(a) \n $ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  </code></pre>"
 prompt.choices = [
   "`float8`",
   "`float32`",
