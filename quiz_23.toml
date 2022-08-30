@@ -1,0 +1,90 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)</code></pre>\n What is the output of `print(b.requires_grad)`?"
+prompt.choices = [
+    "`True`", 
+    "`False`",
+    "`0`",
+    "`Error`"
+]
+answer.answer = 1
+context = """
+Default value is `False`. 
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)</code></pre>\n What is the output of `print(b.grad)`?"
+prompt.choices = [
+    "`0`",
+    "`1`",
+    "`None`",
+    "`Nan`"
+]
+answer.answer = 2
+context = """
+Default value is `None`. 
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=<AddBackward0>)</code></pre>\n What is the output of `print(b.grad)`?"
+prompt.choices = [
+    "`tensor([2.])`",
+    "`tensor([2., 2., 2.,  10.,  2.])`",
+    "`tensor([0., 0., 0., 8., 0.])`"
+]
+answer.answer = 2
+context ="""
+The derivative of each component is `2(b_i-1)`.
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ m = sum((b.data -1)**2) </code></pre>\n What is the output of `m.backward()`?"
+prompt.choices = [
+    "same as for `l`",
+    "`Error`"
+]
+answer.answer = 1
+context = """
+You cannot compute gradient if you detach the `data` from the `tensor`.
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ n = sum((b-1)**2) \n$ n.backward() </code></pre>\n What is the output of `print(b.grad)`?"
+prompt.choices = [
+    "`tensor([0., 0., 0., 8., 0.])`",
+    "`tensor([0., 0., 0., 16., 0.])`"
+]
+answer.answer = 1
+context = """
+Gradients are added by default.
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ n.requires_grad_(True) \n$ n.backward()</code></pre>\n What is the output of `print(b.grad)`?"
+prompt.choices = [
+    "`tensor([0., 0., 0., 16., 0.])`",
+    "`tensor([0., 0., 0., 32., 0.])`"
+]
+answer.answer = 0
+context = """
+There is an error when at `n.backward()`: `RuntimeError: Trying to backward through the graph a second time`
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ m.requires_grad_(True) \n$ m.backward()</code></pre>\n What is the output of `print(b.grad)`?"
+prompt.choices = [
+    "there is an error at `m.backward()`",
+    "`tensor([0., 0., 0., 8., 0.])`",
+    "`tensor([0., 0., 0., 16., 0.])`",
+    "`tensor([0., 0., 0., 32., 0.])`"
+]
+answer.answer = 2
+context = """
+The tensor `b` is not connected with `m` in the computation graph.
+"""

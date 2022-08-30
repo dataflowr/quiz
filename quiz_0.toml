@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Are neural networks slightly conscious?"
+prompt.choices = [
+  "Yes",
+  "No",
+  "Maybe"
+]
+answer.answer = 3
+context = """
+Answer is controversial: ![](./intro_files/twitter_conscious.png)
+"""
