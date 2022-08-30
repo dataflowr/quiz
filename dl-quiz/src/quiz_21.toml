@@ -1,0 +1,26 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ a = np.ones(5) \n$ b = trorch.from_numpy(a) \n$ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  </code></pre>\n What is the output of `a.dtype`?"
+prompt.choices = [
+  "`float8`",
+  "`float32`",
+  "`float64`"
+]
+answer.answer = 2
+context = """
+`from_numpy()` automatically inherits input array `dtype`.
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ b = b.to(torch.uint8) \n$ a[2] = 0 \n$ b[3] = 5 </code></pre>\n What is the output of `print(b)`?"
+prompt.choices = [
+    "`[1. 1. 0. 1. 1.]`", 
+    "`[1. 0. 5. 1. 1.]`",
+    "`[1. 1. 1. 5. 1.]`",
+    "`[1. 1. 0. 5. 1.]`"
+]
+answer.answer = 2
+context = """
+Because of casting, memory between `a` and `b` is not shared. 
+"""

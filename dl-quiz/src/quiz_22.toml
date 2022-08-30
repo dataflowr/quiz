@@ -1,12 +1,23 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ a = np.ones(5) \n $ b = trorch.from_numpy(a) \n $ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  </code></pre>"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ a = np.ones(5) \n$ b = torch.from_numpy(a) \n$ torch.cuda.is_available() \nTrue \n$ device = torch.device('cuda') \n$ b.to(device) </code></pre>\n What is the output of `print(b.device)`"
 prompt.choices = [
-  "`float8`",
-  "`float32`",
-  "`float64`"
+    "`cpu`", 
+    "`cuda:0`"
 ]
-answer.answer = 2
+answer.answer = 0
 context = """
-What else?
+`b.to(device)` is not changing `b` in place. 
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "We continue with <pre><code class=\"language-python\"> $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) </code></pre>\n What is the output of `print(a)`?"
+prompt.choices = [
+  "`[2., 1., 1., 1., 1.]`",
+  "`[1., 1., 1., 1., 1.]`"
+]
+answer.answer = 1
+context = """
+`a` is stored on `cpu` and `b`on `gpu`.
 """
