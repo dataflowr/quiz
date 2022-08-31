@@ -6,4 +6,3 @@ src = "src"
 title = "Deep Learning Quiz"
 
 [preprocessor.quiz]
-fullscreen = true

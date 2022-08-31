@@ -2,7 +2,7 @@
 
 # quizzes only
 
-All quizzes for [Module 2a](https://dataflowr.github.io/website/modules/2a-pytorch-tensors/):
+All quizzes for [Module 2](https://dataflowr.github.io/website/modules/2a-pytorch-tensors/):
 
 {{#quiz quiz_21.toml}}
 
