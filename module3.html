@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Module 2a - Deep Learning Quiz</title>
+        <title>Module 3 - Deep Learning Quiz</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="module2a.html" class="active"><strong aria-hidden="true">2.</strong> Module 2a</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02_basics_runall.html"><strong aria-hidden="true">2.1.</strong> notebook + quiz</a></li><li class="chapter-item expanded "><a href="02_basics_quiz.html"><strong aria-hidden="true">2.2.</strong> quizzes only</a></li></ol></li><li class="chapter-item expanded "><a href="tbc.html"><strong aria-hidden="true">3.</strong> TBC</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="module2.html"><strong aria-hidden="true">2.</strong> Module 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02_basics_runall.html"><strong aria-hidden="true">2.1.</strong> notebook + quiz</a></li><li class="chapter-item expanded "><a href="02_basics_quiz.html"><strong aria-hidden="true">2.2.</strong> quizzes only</a></li></ol></li><li class="chapter-item expanded "><a href="module3.html" class="active"><strong aria-hidden="true">3.</strong> Module 3</a></li><li class="chapter-item expanded "><a href="tbc.html"><strong aria-hidden="true">4.</strong> TBC</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,25 +135,21 @@
                 <div id="content" class="content">
                     <main>
                         <p><a href="https://dataflowr.github.io/website/"><img src="https://raw.githubusercontent.com/dataflowr/website/master/_assets/dataflowr_logo.png" alt="Dataflowr" /></a></p>
-<h1 id="module-2a-pytorch-tensors-and-automatic-differentiation"><a class="header" href="#module-2a-pytorch-tensors-and-automatic-differentiation">Module 2a: PyTorch tensors and automatic differentiation</a></h1>
-<p>You can either do the quizzes corresponding to <a href="https://dataflowr.github.io/website/modules/2a-pytorch-tensors/">Module 2a</a> with a static version of the notebook:</p>
-<ul>
-<li><a href="./02_basics_runall.html">notebook + quiz</a></li>
-</ul>
-<p>or just do all the quizzes </p>
-<ul>
-<li><a href="./02_basics_quiz.html">quizzes only</a></li>
-</ul>
-<p>If you do not make any mistake, you can safely go to next <a href="https://dataflowr.github.io/website/modules/2b-automatic-differentiation/">Module 2b</a></p>
-
+<h1 id="module-3-loss-functions-for-classification"><a class="header" href="#module-3-loss-functions-for-classification">Module 3: Loss functions for classification</a></h1>
+<p>These are the quizzes corresponding to <a href="https://dataflowr.github.io/website/modules/3-loss-functions-for-classification/">Module 3</a></p>
+<p>In all the questions below we assume that all the import have been done <code>import torch...</code>:</p>
+<div class="quiz-placeholder" data-quiz-name="quiz_3"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;tbd \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`print(input)`&quot;,&quot;`print(m(input))`&quot;,&quot;`print(output)`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; m = nn.Sigmoid() \nloss = nn.BCELoss() \ntarget = torch.empty(3).random_(2) \nprint(target) \ninput = torch.randn(3, requires_grad=True) \noptimizer = torch.optim.SGD([input], lr = 0.1) \nprint(m(input)) \nfor _ in range(10000): \n    output = loss(m(input), target) \n    optimizer.zero_grad()\n    output.backward()\n    optimizer.step()\nprint(xxxxxx)&lt;/code&gt;&lt;/pre&gt;\n and obtain the following result: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; tensor([0., 0., 1.])\ntensor([0.3517, 0.4834, 0.3328], grad_fn=&lt;SigmoidBackward&gt;)\ntensor([0.0030, 0.0030, 0.9970], grad_fn=&lt;SigmoidBackward&gt;)&lt;/code&gt;&lt;/pre&gt;\n What was the last `print` command ?&quot;}},{&quot;context&quot;:&quot;tbd\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;yes&quot;,&quot;no&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt;target = torch.empty(1,2,3).random_(2) \nprint(target) \ninput = torch.randn((1,2,3), requires_grad=True) \noptimizer = torch.optim.SGD([input], lr = 0.1) \nprint(m(input).size())&lt;/code&gt;&lt;/pre&gt;\n and get &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; tensor([[[1., 1., 1.],\n         [0., 0., 1.]]])\ntorch.Size([1, 2, 3])&lt;/code&gt;&lt;/pre&gt;\n we then run &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt;for _ in range(10000):\n    output = loss(m(input), target)\n    optimizer.zero_grad()\n    output.backward()\n    optimizer.step()&lt;/code&gt;&lt;/pre&gt;\n Does it produce an error?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+" ></div>
+<p>If you did not make any mistake, you can safely go to <a href="https://dataflowr.github.io/website/modules/4-optimization-for-deep-learning/">Module 4</a><script type="text/javascript" src="mdbook-quiz/embed.js"></script></p>
+<link rel="stylesheet" type="text/css" href="mdbook-quiz/embed.css">
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="02_basics_quiz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="02_basics_runall.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="tbc.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -162,10 +158,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="02_basics_quiz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="02_basics_runall.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="tbc.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
