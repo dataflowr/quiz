@@ -1,0 +1,17 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is the order of the outputs?"
+prompt.choices = [
+    """
+    tensor([0.1576, 0.5853, 0.1312], grad_fn=<SigmoidBackward>)
+    tensor([0.0548, 0.9317, 0.0628], grad_fn=<SigmoidBackward>)
+    """,
+    """
+    tensor([0.0548, 0.9317, 0.0628], grad_fn=<SigmoidBackward>)
+    tensor([0.1576, 0.5853, 0.1312], grad_fn=<SigmoidBackward>)
+    """
+]
+answer.answer = 0
+context = """
+As learning goes on, `m(input)` gets closer to the `target`.
+"""

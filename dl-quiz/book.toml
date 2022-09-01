@@ -6,3 +6,6 @@ src = "src"
 title = "Deep Learning Quiz"
 
 [preprocessor.quiz]
+
+[output.html]
+mathjax-support = true
