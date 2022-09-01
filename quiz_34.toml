@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What do we get?"
+prompt.choices = [
+    "an error",
+    "`tensor([1.2122e+01, 2.5433e-16, 1.9225e+01], grad_fn=<SigmoidBackward>)`",
+    "`tensor([1.0000e+00, 2.5433e-16, 1.0000e+00], grad_fn=<SigmoidBackward>)`"
+]
+answer.answer = 2
+context = """
+Similar as previous question.
+"""

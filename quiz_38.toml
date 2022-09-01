@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "2 pieces of code produce the same output, which ones?"
+prompt.choices = [
+    "1 and 2",
+    "1 and 3",
+    "2 and 3"
+]
+answer.answer = 1
+context = """
+Recall that `NLLLoss(LogSoftmax()) = CrossEntropyLoss()` and `exp(LogSoftmax()) = Softmax()`.
+"""

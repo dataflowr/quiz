@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -141,7 +143,7 @@
 <p>1 - <strong>Take a quiz as soon as you get to it.</strong></p>
 <p>2- <strong>Do not skip a quiz.</strong></p>
 <p>Every quiz looks like the one below. Try it out by clicking &quot;Start&quot;.</p>
-<div class="quiz-placeholder" data-quiz-name="quiz_0"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Answer is controversial: ![](./intro_files/twitter_conscious.png)\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:3},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;Yes&quot;,&quot;No&quot;,&quot;Maybe&quot;],&quot;prompt&quot;:&quot;Are neural networks slightly conscious?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_0"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Answer is controversial: ![](./intro_files/twitter_conscious.png)\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:3},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;Yes&quot;,&quot;No&quot;,&quot;Maybe&quot;],&quot;prompt&quot;:&quot;Are neural networks slightly conscious?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <p>If you get a question incorrect, you will see the correct answer like above.</p>
 <p>Now you are ready to start!<script type="text/javascript" src="mdbook-quiz/embed.js"></script></p>
@@ -365,7 +367,7 @@ print(a)
 </code></pre>
 <pre><code>[1. 1. 0. 5. 1.]
 </code></pre>
-<div class="quiz-placeholder" data-quiz-name="quiz_21"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`from_numpy()` automatically inherits input array `dtype`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`float8`&quot;,&quot;`float32`&quot;,&quot;`float64`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = trorch.from_numpy(a) \n$ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  &lt;/code&gt;&lt;/pre&gt;\n What is the output of `a.dtype`?&quot;}},{&quot;context&quot;:&quot;Because of casting, memory between `a` and `b` is not shared. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[1. 1. 0. 1. 1.]`&quot;,&quot;`[1. 0. 5. 1. 1.]`&quot;,&quot;`[1. 1. 1. 5. 1.]`&quot;,&quot;`[1. 1. 0. 5. 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(torch.uint8) \n$ a[2] = 0 \n$ b[3] = 5 &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b)`?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_21"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`from_numpy()` automatically inherits input array `dtype`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`float8`&quot;,&quot;`float32`&quot;,&quot;`float64`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = trorch.from_numpy(a) \n$ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  &lt;/code&gt;&lt;/pre&gt;\n What is the output of `a.dtype`?&quot;}},{&quot;context&quot;:&quot;Because of casting, memory between `a` and `b` is not shared. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[1. 1. 0. 1. 1.]`&quot;,&quot;`[1. 0. 5. 1. 1.]`&quot;,&quot;`[1. 1. 1. 5. 1.]`&quot;,&quot;`[1. 1. 0. 5. 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(torch.uint8) \n$ a[2] = 0 \n$ b[3] = 5 &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b)`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <h3 id="cuda"><a class="header" href="#cuda">Cuda</a></h3>
 <p><a href="https://youtu.be/BmAS8IH7n3c?t=1120">Video timestamp</a></p>
@@ -417,7 +419,7 @@ print(x.cpu().numpy())
 -0.8821402192115784
 [-0.8821402]
 </code></pre>
-<div class="quiz-placeholder" data-quiz-name="quiz_22"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`b.to(device)` is not changing `b` in place. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`cpu`&quot;,&quot;`cuda:0`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = torch.from_numpy(a) \n$ torch.cuda.is_available() \nTrue \n$ device = torch.device('cuda') \n$ b.to(device) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.device)`&quot;}},{&quot;context&quot;:&quot;`a` is stored on `cpu` and `b`on `gpu`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[2., 1., 1., 1., 1.]`&quot;,&quot;`[1., 1., 1., 1., 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(a)`?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_22"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`b.to(device)` is not changing `b` in place. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`cpu`&quot;,&quot;`cuda:0`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = torch.from_numpy(a) \n$ torch.cuda.is_available() \nTrue \n$ device = torch.device('cuda') \n$ b.to(device) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.device)`&quot;}},{&quot;context&quot;:&quot;`a` is stored on `cpu` and `b`on `gpu`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[2., 1., 1., 1., 1.]`&quot;,&quot;`[1., 1., 1., 1., 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(a)`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <h1 id="simple-interfaces-to-standard-image-data-bases"><a class="header" href="#simple-interfaces-to-standard-image-data-bases">Simple interfaces to standard image data-bases</a></h1>
 <p><a href="https://youtu.be/BmAS8IH7n3c?t=1354">Video timestamp</a></p>
@@ -629,7 +631,7 @@ tensor([358.6502], dtype=torch.float64)
 </code></pre>
 <p>The gradients must be set to zero manually. Otherwise they will cumulate across several <em>.backward()</em> calls. 
 This accumulating behavior is desirable in particular to compute the gradient of a loss summed over several “mini-batches,” or the gradient of a sum of losses.</p>
-<div class="quiz-placeholder" data-quiz-name="quiz_23"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Default value is `False`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`True`&quot;,&quot;`False`&quot;,&quot;`0`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.requires_grad)`?&quot;}},{&quot;context&quot;:&quot;Default value is `None`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`0`&quot;,&quot;`1`&quot;,&quot;`None`&quot;,&quot;`Nan`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The derivative of each component is `2(b_i-1)`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([2.])`&quot;,&quot;`tensor([2., 2., 2.,  10.,  2.])`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=&lt;AddBackward0&gt;)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;You cannot compute gradient if you detach the `data` from the `tensor`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;same as for `l`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m = sum((b.data -1)**2) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `m.backward()`?&quot;}},{&quot;context&quot;:&quot;Gradients are added by default.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n = sum((b-1)**2) \n$ n.backward() &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;There is an error when at `n.backward()`: `RuntimeError: Trying to backward through the graph a second time`\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n.requires_grad_(True) \n$ n.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The tensor `b` is not connected with `m` in the computation graph.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;there is an error at `m.backward()`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m.requires_grad_(True) \n$ m.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_23"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Default value is `False`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`True`&quot;,&quot;`False`&quot;,&quot;`0`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.requires_grad)`?&quot;}},{&quot;context&quot;:&quot;Default value is `None`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`0`&quot;,&quot;`1`&quot;,&quot;`None`&quot;,&quot;`Nan`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The derivative of each component is `2(b_i-1)`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([2.])`&quot;,&quot;`tensor([2., 2., 2.,  10.,  2.])`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=&lt;AddBackward0&gt;)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;You cannot compute gradient if you detach the `data` from the `tensor`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;same as for `l`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m = sum((b.data -1)**2) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `m.backward()`?&quot;}},{&quot;context&quot;:&quot;Gradients are added by default.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n = sum((b-1)**2) \n$ n.backward() &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;There is an error when at `n.backward()`: `RuntimeError: Trying to backward through the graph a second time`\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n.requires_grad_(True) \n$ n.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The tensor `b` is not connected with `m` in the computation graph.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;there is an error at `m.backward()`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m.requires_grad_(True) \n$ m.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <p><a href="https://dataflowr.github.io/website/"><img src="https://raw.githubusercontent.com/dataflowr/website/master/_assets/dataflowr_logo.png" alt="Dataflowr" /></a></p>
 <pre><code class="language-python">
@@ -638,20 +640,218 @@ This accumulating behavior is desirable in particular to compute the gradient of
 <link rel="stylesheet" type="text/css" href="mdbook-quiz/embed.css"><div style="break-before: page; page-break-before: always;"></div><p><a href="https://dataflowr.github.io/website/"><img src="https://raw.githubusercontent.com/dataflowr/website/master/_assets/dataflowr_logo.png" alt="Dataflowr" /></a></p>
 <h1 id="quizzes-only"><a class="header" href="#quizzes-only">quizzes only</a></h1>
 <p>All quizzes for <a href="https://dataflowr.github.io/website/modules/2a-pytorch-tensors/">Module 2</a>:</p>
-<div class="quiz-placeholder" data-quiz-name="quiz_21"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`from_numpy()` automatically inherits input array `dtype`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`float8`&quot;,&quot;`float32`&quot;,&quot;`float64`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = trorch.from_numpy(a) \n$ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  &lt;/code&gt;&lt;/pre&gt;\n What is the output of `a.dtype`?&quot;}},{&quot;context&quot;:&quot;Because of casting, memory between `a` and `b` is not shared. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[1. 1. 0. 1. 1.]`&quot;,&quot;`[1. 0. 5. 1. 1.]`&quot;,&quot;`[1. 1. 1. 5. 1.]`&quot;,&quot;`[1. 1. 0. 5. 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(torch.uint8) \n$ a[2] = 0 \n$ b[3] = 5 &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b)`?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_21"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`from_numpy()` automatically inherits input array `dtype`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`float8`&quot;,&quot;`float32`&quot;,&quot;`float64`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = trorch.from_numpy(a) \n$ print(b) \n tensor([1., 1., 1., 1., 1.], dtype=torch.float64)  &lt;/code&gt;&lt;/pre&gt;\n What is the output of `a.dtype`?&quot;}},{&quot;context&quot;:&quot;Because of casting, memory between `a` and `b` is not shared. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[1. 1. 0. 1. 1.]`&quot;,&quot;`[1. 0. 5. 1. 1.]`&quot;,&quot;`[1. 1. 1. 5. 1.]`&quot;,&quot;`[1. 1. 0. 5. 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(torch.uint8) \n$ a[2] = 0 \n$ b[3] = 5 &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b)`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <p>If something is unclear, you should probably get a refresher <a href="./02_basics_runall.html#module-2-pytorch-tensors-and-automatic-differentiation">here</a></p>
-<div class="quiz-placeholder" data-quiz-name="quiz_22"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`b.to(device)` is not changing `b` in place. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`cpu`&quot;,&quot;`cuda:0`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = torch.from_numpy(a) \n$ torch.cuda.is_available() \nTrue \n$ device = torch.device('cuda') \n$ b.to(device) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.device)`&quot;}},{&quot;context&quot;:&quot;`a` is stored on `cpu` and `b`on `gpu`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[2., 1., 1., 1., 1.]`&quot;,&quot;`[1., 1., 1., 1., 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(a)`?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_22"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`b.to(device)` is not changing `b` in place. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`cpu`&quot;,&quot;`cuda:0`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ a = np.ones(5) \n$ b = torch.from_numpy(a) \n$ torch.cuda.is_available() \nTrue \n$ device = torch.device('cuda') \n$ b.to(device) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.device)`&quot;}},{&quot;context&quot;:&quot;`a` is stored on `cpu` and `b`on `gpu`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`[2., 1., 1., 1., 1.]`&quot;,&quot;`[1., 1., 1., 1., 1.]`&quot;],&quot;prompt&quot;:&quot;We continue with &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(a)`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <p>If something is unclear, you should probably get a refresher <a href="./02_basics_runall.html#cuda">here</a></p>
-<div class="quiz-placeholder" data-quiz-name="quiz_23"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Default value is `False`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`True`&quot;,&quot;`False`&quot;,&quot;`0`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.requires_grad)`?&quot;}},{&quot;context&quot;:&quot;Default value is `None`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`0`&quot;,&quot;`1`&quot;,&quot;`None`&quot;,&quot;`Nan`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The derivative of each component is `2(b_i-1)`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([2.])`&quot;,&quot;`tensor([2., 2., 2.,  10.,  2.])`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=&lt;AddBackward0&gt;)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;You cannot compute gradient if you detach the `data` from the `tensor`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;same as for `l`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m = sum((b.data -1)**2) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `m.backward()`?&quot;}},{&quot;context&quot;:&quot;Gradients are added by default.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n = sum((b-1)**2) \n$ n.backward() &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;There is an error when at `n.backward()`: `RuntimeError: Trying to backward through the graph a second time`\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n.requires_grad_(True) \n$ n.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The tensor `b` is not connected with `m` in the computation graph.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;there is an error at `m.backward()`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m.requires_grad_(True) \n$ m.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<div class="quiz-placeholder" data-quiz-name="quiz_23"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Default value is `False`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`True`&quot;,&quot;`False`&quot;,&quot;`0`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.requires_grad)`?&quot;}},{&quot;context&quot;:&quot;Default value is `None`. \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`0`&quot;,&quot;`1`&quot;,&quot;`None`&quot;,&quot;`Nan`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The derivative of each component is `2(b_i-1)`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([2.])`&quot;,&quot;`tensor([2., 2., 2.,  10.,  2.])`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=&lt;AddBackward0&gt;)&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;You cannot compute gradient if you detach the `data` from the `tensor`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;same as for `l`&quot;,&quot;`Error`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m = sum((b.data -1)**2) &lt;/code&gt;&lt;/pre&gt;\n What is the output of `m.backward()`?&quot;}},{&quot;context&quot;:&quot;Gradients are added by default.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n = sum((b-1)**2) \n$ n.backward() &lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;There is an error when at `n.backward()`: `RuntimeError: Trying to backward through the graph a second time`\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ n.requires_grad_(True) \n$ n.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}},{&quot;context&quot;:&quot;The tensor `b` is not connected with `m` in the computation graph.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;there is an error at `m.backward()`&quot;,&quot;`tensor([0., 0., 0., 8., 0.])`&quot;,&quot;`tensor([0., 0., 0., 16., 0.])`&quot;,&quot;`tensor([0., 0., 0., 32., 0.])`&quot;],&quot;prompt&quot;:&quot;We continue with: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; $ m.requires_grad_(True) \n$ m.backward()&lt;/code&gt;&lt;/pre&gt;\n What is the output of `print(b.grad)`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <p>If something is unclear, you should probably get a refresher <a href="./02_basics_runall.html#autograd-automatic-differentiation">here</a><script type="text/javascript" src="mdbook-quiz/embed.js"></script></p>
 <link rel="stylesheet" type="text/css" href="mdbook-quiz/embed.css"><div style="break-before: page; page-break-before: always;"></div><p><a href="https://dataflowr.github.io/website/"><img src="https://raw.githubusercontent.com/dataflowr/website/master/_assets/dataflowr_logo.png" alt="Dataflowr" /></a></p>
 <h1 id="module-3-loss-functions-for-classification"><a class="header" href="#module-3-loss-functions-for-classification">Module 3: Loss functions for classification</a></h1>
 <p>These are the quizzes corresponding to <a href="https://dataflowr.github.io/website/modules/3-loss-functions-for-classification/">Module 3</a></p>
-<p>In all the questions below we assume that all the import have been done <code>import torch...</code>:</p>
-<div class="quiz-placeholder" data-quiz-name="quiz_3"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;tbd \n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`print(input)`&quot;,&quot;`print(m(input))`&quot;,&quot;`print(output)`&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; m = nn.Sigmoid() \nloss = nn.BCELoss() \ntarget = torch.empty(3).random_(2) \nprint(target) \ninput = torch.randn(3, requires_grad=True) \noptimizer = torch.optim.SGD([input], lr = 0.1) \nprint(m(input)) \nfor _ in range(10000): \n    output = loss(m(input), target) \n    optimizer.zero_grad()\n    output.backward()\n    optimizer.step()\nprint(xxxxxx)&lt;/code&gt;&lt;/pre&gt;\n and obtain the following result: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; tensor([0., 0., 1.])\ntensor([0.3517, 0.4834, 0.3328], grad_fn=&lt;SigmoidBackward&gt;)\ntensor([0.0030, 0.0030, 0.9970], grad_fn=&lt;SigmoidBackward&gt;)&lt;/code&gt;&lt;/pre&gt;\n What was the last `print` command ?&quot;}},{&quot;context&quot;:&quot;tbd\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;yes&quot;,&quot;no&quot;],&quot;prompt&quot;:&quot;We run the following code: &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt;target = torch.empty(1,2,3).random_(2) \nprint(target) \ninput = torch.randn((1,2,3), requires_grad=True) \noptimizer = torch.optim.SGD([input], lr = 0.1) \nprint(m(input).size())&lt;/code&gt;&lt;/pre&gt;\n and get &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt; tensor([[[1., 1., 1.],\n         [0., 0., 1.]]])\ntorch.Size([1, 2, 3])&lt;/code&gt;&lt;/pre&gt;\n we then run &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt;for _ in range(10000):\n    output = loss(m(input), target)\n    optimizer.zero_grad()\n    output.backward()\n    optimizer.step()&lt;/code&gt;&lt;/pre&gt;\n Does it produce an error?&quot;}}]}"  data-quiz-commit-hash="59bbd8102c9df64c499fead210142af11519b68a
+<p>In all the questions below we assume that all the import have been done </p>
+<pre><code class="language-python">import torch
+import torch.nn as nn
+</code></pre>
+<p>Try to answer the questions without running the code ;-)</p>
+<p>We run the following code: </p>
+<pre><code class="language-python">&gt; m = nn.Sigmoid() 
+&gt; loss = nn.BCELoss() 
+&gt; target = torch.empty(3).random_(2) 
+&gt; print(target) 
+tensor([0., 1., 1.])
+&gt; input = torch.randn(3, requires_grad=True) 
+&gt; optimizer = torch.optim.SGD([input], lr = 0.1)
+&gt; print(m(input)) 
+tensor([0.3517, 0.4834, 0.3328], grad_fn=&lt;SigmoidBackward&gt;)
+&gt; for _ in range(10000): 
+    output = loss(m(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+&gt; print(xxxxxx)
+</code></pre>
+<p>and obtain the following result: </p>
+<pre><code class="language-python">tensor([0.0030, 0.9970, 0.9970], grad_fn=&lt;SigmoidBackward&gt;)
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_31"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;We are optimizing the `input` such that `m(input)~target`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`print(input)`&quot;,&quot;`print(m(input))`&quot;,&quot;`print(output)`&quot;],&quot;prompt&quot;:&quot;What was the last `print` command ?&quot;}},{&quot;context&quot;:&quot;We should have `m(input)~target` where `m` is the sigmoid, hence negative values for components of target close to zero and positive ones for those close to one.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;tensor([ -5.7955, 5.7978, 5.8147], requires_grad=True)&quot;,&quot;tensor([ 0.0034,  0.9998, 0.9997], requires_grad=True)&quot;,&quot;tensor([ 0.0027,  0.0030, 0.0021], requires_grad=True)&quot;],&quot;prompt&quot;:&quot;What is the output for `print(input)`?&quot;}},{&quot;context&quot;:&quot;A loss is always a scalar.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;tensor([ 0.0027,  0.0030, 0.0021], grad_fn=&lt;BinaryCrossEntropyBackward&gt;)&quot;,&quot;tensor(0.0030, grad_fn=&lt;BinaryCrossEntropyBackward&gt;)&quot;],&quot;prompt&quot;:&quot;What is the output for `print(loss(m(input), target))`?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We run the following code: </p>
+<pre><code class="language-python">&gt; target = torch.empty(1,2,3).random_(2) 
+&gt; print(target)
+tensor([[[1., 1., 1.],
+    [0., 0., 1.]]])
+&gt; input = torch.randn((1,2,3), requires_grad=True)
+&gt; optimizer = torch.optim.SGD([input], lr = 0.1)
+&gt; print(m(input).size())
+torch.Size([1, 2, 3])
+</code></pre>
+<p>We then run </p>
+<pre><code class="language-python">for _ in range(10000):
+    output = loss(m(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_32"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;As long as `input` and `target` have the same dimensions, [BCELoss](https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html#torch.nn.BCELoss) is working.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;yes&quot;,&quot;no&quot;],&quot;prompt&quot;:&quot;Does it produce an error?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We run the following code:</p>
+<pre><code class="language-python">&gt; target = torch.randn(3)
+&gt; print(target)
+tensor([-0.1272, -0.4165,  0.1002])
+&gt; input = torch.randn(3, requires_grad=True)
+&gt; optimizer = torch.optim.SGD([input], lr = 0.1)
+&gt; print(m(input))
+tensor([0.5203, 0.6769, 0.6586], grad_fn=&lt;SigmoidBackward&gt;)
+</code></pre>
+<p>and then</p>
+<pre><code class="language-python">for _ in range(10000):
+    output = loss(m(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(m(input))
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_33"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;`BCELoss` is well defined for negative targets but sigmoid is positive.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;an error&quot;,&quot;`tensor([5.6248e-14, 8.8511e-15, 1.0022e-01], grad_fn=&lt;SigmoidBackward&gt;)`&quot;,&quot;`tensor([-1.2722e-01, -4.1651e-15, 1.0022e-01], grad_fn=&lt;SigmoidBackward&gt;)`&quot;],&quot;prompt&quot;:&quot;What do we get?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We run the following code:</p>
+<pre><code class="language-python">&gt; target = 10*torch.randn(3)
+&gt; print(target)
+tensor([ 12.1225, -11.8731,  19.2255])
+&gt; input = torch.randn(3, requires_grad=True)
+&gt; optimizer = torch.optim.SGD([input], lr = 0.1)
+&gt; print(m(input))
+tensor([0.2664, 0.7103, 0.5226], grad_fn=&lt;SigmoidBackward&gt;)
+</code></pre>
+<p>and then</p>
+<pre><code class="language-python">for _ in range(10000):
+    output = loss(m(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(m(input))
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_34"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Similar as previous question.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:2},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;an error&quot;,&quot;`tensor([1.2122e+01, 2.5433e-16, 1.9225e+01], grad_fn=&lt;SigmoidBackward&gt;)`&quot;,&quot;`tensor([1.0000e+00, 2.5433e-16, 1.0000e+00], grad_fn=&lt;SigmoidBackward&gt;)`&quot;],&quot;prompt&quot;:&quot;What do we get?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We run:</p>
+<pre><code class="language-python">&gt; loss2 = nn.BCEWithLogitsLoss()
+&gt; target = torch.empty(3).random_(2)
+&gt; print(target)
+tensor([0., 1., 0.])
+</code></pre>
+<p>and then code1:</p>
+<pre><code class="language-python">input = torch.randn(3, requires_grad=True)
+optimizer = torch.optim.SGD([input], lr = 0.1)
+for _ in range(500):
+    output = loss2(m(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(m(input))
+</code></pre>
+<p>and then code2:</p>
+<pre><code class="language-python">input = torch.randn(3, requires_grad=True)
+optimizer = torch.optim.SGD([input], lr = 0.1)
+for _ in range(500):
+    output = loss2(input, target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(m(input))
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_35"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;As learning goes on, `m(input)` gets closer to the `target`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;    tensor([0.1576, 0.5853, 0.1312], grad_fn=&lt;SigmoidBackward&gt;)\n    tensor([0.0548, 0.9317, 0.0628], grad_fn=&lt;SigmoidBackward&gt;)\n    &quot;,&quot;    tensor([0.0548, 0.9317, 0.0628], grad_fn=&lt;SigmoidBackward&gt;)\n    tensor([0.1576, 0.5853, 0.1312], grad_fn=&lt;SigmoidBackward&gt;)\n    &quot;],&quot;prompt&quot;:&quot;What is the order of the outputs?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We run:</p>
+<pre><code>&gt; loss3 = nn.NLLLoss()
+&gt; m3 = nn.LogSoftmax(dim=1)
+&gt; target = torch.empty(4).random_(6)
+&gt; print(target)
+tensor([1., 5., 0., 2.])
+</code></pre>
+<p>then code1:</p>
+<pre><code>input = torch.randn(4, requires_grad=True)
+optimizer = torch.optim.SGD([input], lr = 0.1)
+for _ in range(1000):
+    output = loss3(m3(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(torch.exp(m3(input)))
+</code></pre>
+<p>code2:</p>
+<pre><code>input = torch.randn((4,7), requires_grad=True)
+optimizer = torch.optim.SGD([input], lr = 0.1)
+for _ in range(1000):
+    output = loss3(m3(input), target.long())
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(torch.exp(m3(input)))
+</code></pre>
+<p>code3:</p>
+<pre><code>input = torch.randn((4,6), requires_grad=True)
+optimizer = torch.optim.SGD([input], lr = 0.1)
+for _ in range(1000):
+    output = loss3(m3(input), target)
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(torch.exp(m3(input)))
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_36"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Size of the input is not correct in code1 and type of the target is not correct in code3.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;code1&quot;,&quot;code2&quot;,&quot;code3&quot;],&quot;prompt&quot;:&quot;Which code does NOT give an error?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We now take</p>
+<pre><code class="language-python">&gt; target = torch.empty(4,2,3).random_(6)
+&gt; print(target)
+tensor([[[3., 1., 0.],
+         [4., 2., 3.]],
+
+        [[1., 3., 3.],
+         [0., 1., 0.]],
+
+        [[2., 1., 1.],
+         [0., 4., 5.]],
+
+        [[1., 3., 5.],
+         [3., 2., 5.]]])
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_37"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;From the documentation of [NLLLoss](https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html#torch.nn.NLLLoss):\ninput has to be a Tensor of size either \\( (minibatch, C) \\) or \\( (minibatch, C, d_1, d_2, ..., d_K) \\) with \\( K≥1 \\) for the K-dimensional case. \nThe latter is useful for higher dimension inputs, such as computing NLL loss per-pixel for 2D images.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:0},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;`input = torch.randn((4,6,2,3), requires_grad=True)`&quot;,&quot;`input = torch.randn((4,2,3,6), requires_grad=True)`&quot;,&quot;`input = torch.randn((24,6), requires_grad=True)`&quot;],&quot;prompt&quot;:&quot;How to modify the first line of the working code above to be able to use it again?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
+" ></div>
+<p>We now run</p>
+<pre><code class="language-python">loss4 = nn.CrossEntropyLoss()
+m4 = nn.Softmax(dim=1)
+target = torch.empty(4).random_(6)
+input = torch.randn((4,6), requires_grad=True)
+optimizer = torch.optim.SGD([input], lr = 0.1)
+</code></pre>
+<p>then code1</p>
+<pre><code class="language-python">for _ in range(500):
+    output = loss4(input, target.long())
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(m4(input))
+</code></pre>
+<p>code2</p>
+<pre><code class="language-python">for _ in range(500):
+    output = loss3(input, target.long())
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(m4(input))
+</code></pre>
+<p>code3</p>
+<pre><code class="language-python">for _ in range(500):
+    output = loss3(m3(input), target.long())
+    optimizer.zero_grad()
+    output.backward()
+    optimizer.step()
+print(torch.exp(m3(input)))
+</code></pre>
+<div class="quiz-placeholder" data-quiz-name="quiz_38"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Recall that `NLLLoss(LogSoftmax()) = CrossEntropyLoss()` and `exp(LogSoftmax()) = Softmax()`.\n&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:1},&quot;prompt&quot;:{&quot;choices&quot;:[&quot;1 and 2&quot;,&quot;1 and 3&quot;,&quot;2 and 3&quot;],&quot;prompt&quot;:&quot;2 pieces of code produce the same output, which ones?&quot;}}]}"  data-quiz-commit-hash="77899f1c91aa0eec60bd1dd3ec8c832cf0a06e63
 " ></div>
 <p>If you did not make any mistake, you can safely go to <a href="https://dataflowr.github.io/website/modules/4-optimization-for-deep-learning/">Module 4</a><script type="text/javascript" src="mdbook-quiz/embed.js"></script></p>
 <link rel="stylesheet" type="text/css" href="mdbook-quiz/embed.css"><div style="break-before: page; page-break-before: always;"></div><p><a href="https://dataflowr.github.io/website/"><img src="https://raw.githubusercontent.com/dataflowr/website/master/_assets/dataflowr_logo.png" alt="Dataflowr" /></a></p>
@@ -685,7 +885,9 @@ This accumulating behavior is desirable in particular to compute the gradient of
         <!-- Custom JS scripts -->
         <script type="text/javascript">
         window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
         });
         </script>
     </body>

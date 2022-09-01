@@ -1,0 +1,37 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What was the last `print` command ?"
+prompt.choices = [
+    "`print(input)`",
+    "`print(m(input))`",
+    "`print(output)`"
+]
+answer.answer = 1
+context = """
+We are optimizing the `input` such that `m(input)~target`.
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is the output for `print(input)`?"
+prompt.choices = [
+    "tensor([ -5.7955, 5.7978, 5.8147], requires_grad=True)",
+    "tensor([ 0.0034,  0.9998, 0.9997], requires_grad=True)",
+    "tensor([ 0.0027,  0.0030, 0.0021], requires_grad=True)"
+]
+answer.answer = 0
+context = """
+We should have `m(input)~target` where `m` is the sigmoid, hence negative values for components of target close to zero and positive ones for those close to one.
+"""
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is the output for `print(loss(m(input), target))`?"
+prompt.choices = [
+    "tensor([ 0.0027,  0.0030, 0.0021], grad_fn=<BinaryCrossEntropyBackward>)",
+    "tensor(0.0030, grad_fn=<BinaryCrossEntropyBackward>)"
+]
+answer.answer = 1
+context = """
+A loss is always a scalar.
+"""

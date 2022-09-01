@@ -1,0 +1,14 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "How to modify the first line of the working code above to be able to use it again?"
+prompt.choices = [
+    "`input = torch.randn((4,6,2,3), requires_grad=True)`",
+    "`input = torch.randn((4,2,3,6), requires_grad=True)`",
+    "`input = torch.randn((24,6), requires_grad=True)`"
+]
+answer.answer = 0
+context = """
+From the documentation of [NLLLoss](https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html#torch.nn.NLLLoss):
+input has to be a Tensor of size either \\( (minibatch, C) \\) or \\( (minibatch, C, d_1, d_2, ..., d_K) \\) with \\( K≥1 \\) for the K-dimensional case. 
+The latter is useful for higher dimension inputs, such as computing NLL loss per-pixel for 2D images.
+"""

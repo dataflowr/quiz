@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What do we get?"
+prompt.choices = [
+    "an error",
+    "`tensor([5.6248e-14, 8.8511e-15, 1.0022e-01], grad_fn=<SigmoidBackward>)`",
+    "`tensor([-1.2722e-01, -4.1651e-15, 1.0022e-01], grad_fn=<SigmoidBackward>)`"
+]
+answer.answer = 1
+context = """
+`BCELoss` is well defined for negative targets but sigmoid is positive.
+"""

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Does it produce an error?"
+prompt.choices = [
+    "yes",
+    "no"
+]
+answer.answer = 1
+context = """
+As long as `input` and `target` have the same dimensions, [BCELoss](https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html#torch.nn.BCELoss) is working.
+"""

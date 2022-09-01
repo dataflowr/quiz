@@ -1,0 +1,12 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Which code does NOT give an error?"
+prompt.choices = [
+    "code1",
+    "code2",
+    "code3"
+]
+answer.answer = 1
+context = """
+Size of the input is not correct in code1 and type of the target is not correct in code3.
+"""
