@@ -1,0 +1,116 @@
+[[questions]]
+type = "Tracing"
+prompt.program = """
+def print_11():
+    x = 11            
+    print(x)          
+
+def print_x_outside():
+    print(x)          
+
+x = 10                
+
+def main():
+
+    def print_x_inside():
+        print(x)      
+
+    x = 11            
+    print_11()        
+    print_x_inside()  
+
+    x = 12            
+    print_x_outside() 
+    print_11()        
+    print_x_inside()  
+
+main()
+"""
+answer.doesCompile = true
+answer.stdout = """
+11
+11
+10
+11
+12"""
+
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+def main():
+      
+  def print_modify(new_value):
+    print(x)
+    x = new_value
+      
+  x = 10
+  print_modify(11)
+    
+main()
+"""
+answer.doesCompile = false
+answer.line = 4
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+def main():
+    def other_print_modify(new_value):
+        nonlocal x
+        print(x)
+        return new_value
+    
+    x = 10
+    other_print_modify(11)
+    print(x)
+    
+main()
+"""
+answer.doesCompile = true
+answer.stdout = """
+10
+11"""
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+def print_12():
+    x = [1, 2]
+    print(x)          
+
+def print_x_outside():
+    x[0] = 3
+    print(x)          
+
+x = ['a', 'b']                
+
+def main():
+    
+    def print_x_inside():
+        x[1] = 'b'
+        print(x)     
+
+    x = [1, 2]                  
+    print_x_inside()   
+    print(x)           
+    print_12()         
+    
+    x = [1,2,3]
+    print_x_outside()  
+    print_x_inside()   
+    print(x)           
+    print_12()         
+
+main()
+print(x)
+"""
+answer.doesCompile = true
+answer.stdout = """
+[1, 'b']
+[1, 'b']
+[1, 2]
+[3, 'b']
+[1, 'b', 3]
+[1, 'b', 3]
+[1, 2]"""

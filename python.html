@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>TBC - Deep Learning Quiz</title>
+        <title>Python - Deep Learning Quiz</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">2.</strong> Python</a></li><li class="chapter-item expanded "><a href="module2.html"><strong aria-hidden="true">3.</strong> Module 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02_basics_runall.html"><strong aria-hidden="true">3.1.</strong> notebook + quiz</a></li><li class="chapter-item expanded "><a href="02_basics_quiz.html"><strong aria-hidden="true">3.2.</strong> quizzes only</a></li></ol></li><li class="chapter-item expanded "><a href="module3.html"><strong aria-hidden="true">4.</strong> Module 3</a></li><li class="chapter-item expanded "><a href="tbc.html" class="active"><strong aria-hidden="true">5.</strong> TBC</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="python.html" class="active"><strong aria-hidden="true">2.</strong> Python</a></li><li class="chapter-item expanded "><a href="module2.html"><strong aria-hidden="true">3.</strong> Module 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02_basics_runall.html"><strong aria-hidden="true">3.1.</strong> notebook + quiz</a></li><li class="chapter-item expanded "><a href="02_basics_quiz.html"><strong aria-hidden="true">3.2.</strong> quizzes only</a></li></ol></li><li class="chapter-item expanded "><a href="module3.html"><strong aria-hidden="true">4.</strong> Module 3</a></li><li class="chapter-item expanded "><a href="tbc.html"><strong aria-hidden="true">5.</strong> TBC</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,15 +137,28 @@
                 <div id="content" class="content">
                     <main>
                         <p><a href="https://dataflowr.github.io/website/"><img src="https://raw.githubusercontent.com/dataflowr/website/master/_assets/dataflowr_logo.png" alt="Dataflowr" /></a></p>
-<h1 id="tbc"><a class="header" href="#tbc">TBC</a></h1>
-<p>You can submit feedback using the <a href="https://github.com/dataflowr/quiz">GitHub repo</a>. Thanks!</p>
-
+<h1 id="python"><a class="header" href="#python">Python</a></h1>
+<p>Quiz to test your knowledge of python.</p>
+<h1 id="1-scope"><a class="header" href="#1-scope">1. Scope</a></h1>
+<div class="quiz-placeholder" data-quiz-name="quiz_01"  data-quiz-questions="{&quot;questions&quot;:[{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;11\n11\n10\n11\n12&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;def print_11():\n    x = 11            \n    print(x)          \n\ndef print_x_outside():\n    print(x)          \n\nx = 10                \n\ndef main():\n\n    def print_x_inside():\n        print(x)      \n\n    x = 11            \n    print_11()        \n    print_x_inside()  \n\n    x = 12            \n    print_x_outside() \n    print_11()        \n    print_x_inside()  \n\nmain()\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:false,&quot;line&quot;:4},&quot;prompt&quot;:{&quot;program&quot;:&quot;def main():\n      \n  def print_modify(new_value):\n    print(x)\n    x = new_value\n      \n  x = 10\n  print_modify(11)\n    \nmain()\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;10\n11&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;def main():\n    def other_print_modify(new_value):\n        nonlocal x\n        print(x)\n        return new_value\n    \n    x = 10\n    other_print_modify(11)\n    print(x)\n    \nmain()\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;[1, 'b']\n[1, 'b']\n[1, 2]\n[3, 'b']\n[1, 'b', 3]\n[1, 'b', 3]\n[1, 2]&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;def print_12():\n    x = [1, 2]\n    print(x)          \n\ndef print_x_outside():\n    x[0] = 3\n    print(x)          \n\nx = ['a', 'b']                \n\ndef main():\n    \n    def print_x_inside():\n        x[1] = 'b'\n        print(x)     \n\n    x = [1, 2]                  \n    print_x_inside()   \n    print(x)           \n    print_12()         \n    \n    x = [1,2,3]\n    print_x_outside()  \n    print_x_inside()   \n    print(x)           \n    print_12()         \n\nmain()\nprint(x)\n&quot;}}]}"  data-quiz-commit-hash="4bc440d623db7b3763d05ee02f79802ba4c3765f
+" ></div>
+<h1 id="2-leaking-in-for-loop"><a class="header" href="#2-leaking-in-for-loop">2. Leaking in for loop</a></h1>
+<div class="quiz-placeholder" data-quiz-name="quiz_02"  data-quiz-questions="{&quot;questions&quot;:[{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;9 2&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;for _ in range(10):\n    foo = 2\nprint(_, foo)\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;9&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;i = 20\n\nlist_a = []\nfor i in range(10):\n    list_a.append(2*i)\n\nprint(i)\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;20&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;i = 20\n\nlitst_b = [2*i for i in range(10)]\n\nprint(i)\n&quot;}}]}"  data-quiz-commit-hash="4bc440d623db7b3763d05ee02f79802ba4c3765f
+" ></div>
+<h1 id="3-lazy-evaluation"><a class="header" href="#3-lazy-evaluation">3. Lazy evaluation</a></h1>
+<div class="quiz-placeholder" data-quiz-name="quiz_03"  data-quiz-questions="{&quot;questions&quot;:[{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;2\n2\n2&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;list_fun = []\nfor i in range(3):\n     list_fun.append(lambda: i)\n\nfor f in list_fun:\n     print(f())\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;2\n2\n2&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;list_fun_comp = [lambda: i for i in range(3)] \nfor f in list_fun_comp:\n     print(f())\n&quot;}},{&quot;type&quot;:&quot;Tracing&quot;,&quot;answer&quot;:{&quot;doesCompile&quot;:true,&quot;stdout&quot;:&quot;0\n1\n2&quot;},&quot;prompt&quot;:{&quot;program&quot;:&quot;list_fun_curry = [(lambda x :(lambda: x))(i) for i in range(3)]\n\nfor f in list_fun_curry:\n     print(f())\n&quot;}}]}"  data-quiz-commit-hash="4bc440d623db7b3763d05ee02f79802ba4c3765f
+" ></div>
+<p>Now is time to look at <a href="https://hackmd.io/@mlelarge/H10h3Cves">some explanations</a><script type="text/javascript" src="mdbook-quiz/embed.js"></script></p>
+<link rel="stylesheet" type="text/css" href="mdbook-quiz/embed.css">
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="module3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="module2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -153,8 +166,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="module3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="module2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
