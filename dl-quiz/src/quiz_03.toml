@@ -1,0 +1,43 @@
+[[questions]]
+type = "Tracing"
+prompt.program = """
+list_fun = []
+for i in range(3):
+     list_fun.append(lambda: i)
+
+for f in list_fun:
+     print(f())
+"""
+answer.doesCompile = true
+answer.stdout = """
+2
+2
+2"""
+
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+list_fun_comp = [lambda: i for i in range(3)] 
+for f in list_fun_comp:
+     print(f())
+"""
+answer.doesCompile = true
+answer.stdout = """
+2
+2
+2"""
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+list_fun_curry = [(lambda x :(lambda: x))(i) for i in range(3)]
+
+for f in list_fun_curry:
+     print(f())
+"""
+answer.doesCompile = true
+answer.stdout = """
+0
+1
+2"""

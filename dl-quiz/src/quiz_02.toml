@@ -1,0 +1,36 @@
+[[questions]]
+type = "Tracing"
+prompt.program = """
+for _ in range(10):
+    foo = 2
+print(_, foo)
+"""
+answer.doesCompile = true
+answer.stdout = "9 2"
+
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+i = 20
+
+list_a = []
+for i in range(10):
+    list_a.append(2*i)
+
+print(i)
+"""
+answer.doesCompile = true
+answer.stdout = "9"
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+i = 20
+
+litst_b = [2*i for i in range(10)]
+
+print(i)
+"""
+answer.doesCompile = true
+answer.stdout = "20"
