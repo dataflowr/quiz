@@ -59,7 +59,7 @@ def main():
     def other_print_modify(new_value):
         nonlocal x
         print(x)
-        return new_value
+        x = new_value
     
     x = 10
     other_print_modify(11)
