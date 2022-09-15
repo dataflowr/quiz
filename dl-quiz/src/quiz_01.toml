@@ -50,7 +50,7 @@ def main():
 main()
 """
 answer.doesCompile = false
-answer.line = 4
+answer.lineNumber = 4
 
 [[questions]]
 type = "Tracing"
