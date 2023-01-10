@@ -14,7 +14,7 @@ Default value is `False`.
 
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)</code></pre>\n What is the output of `print(b.grad)`?"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)</code></pre>\n We continue with: <pre><code class=\"language-python\"> $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)</code></pre>\n What is the output of `print(b.grad)`?"
 prompt.choices = [
     "`0`",
     "`1`",
@@ -28,7 +28,7 @@ Default value is `None`.
 
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=<AddBackward0>)</code></pre>\n What is the output of `print(b.grad)`?"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)\n $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True)</code></pre>\n We continue with: <pre><code class=\"language-python\"> $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=<AddBackward0>)</code></pre>\n What is the output of `print(b.grad)`?"
 prompt.choices = [
     "`tensor([2.])`",
     "`tensor([2., 2., 2.,  10.,  2.])`",
@@ -41,7 +41,7 @@ The derivative of each component is `2(b_i-1)`.
 
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ m = sum((b.data -1)**2) </code></pre>\n What is the output of `m.backward()`?"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)\n $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True) $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=<AddBackward0>)</code></pre>\n We continue with: <pre><code class=\"language-python\"> $ m = sum((b.data -1)**2) \n </code></pre>\n What is the output of `m.backward()`?"
 prompt.choices = [
     "same as for `l`",
     "`Error`"
@@ -53,7 +53,7 @@ You cannot compute gradient if you detach the `data` from the `tensor`.
 
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We continue with: <pre><code class=\"language-python\"> $ n = sum((b-1)**2) \n$ n.backward() </code></pre>\n What is the output of `print(b.grad)`?"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ b = torch.tensor([1, 1, 1, 5, 1], dtype=torch.float)\n $ b.requires_grad_(True) \ntensor([1., 1., 1., 5., 1.], requires_grad=True) $ l = sum((b-1)**2) \n$ l.backward() \n$ print(l) \ntensor(16., grad_fn=<AddBackward0>)</code></pre>\n We continue with: <pre><code class=\"language-python\"> $ n = sum((b-1)**2) \n$ n.backward() \n $ m = sum((b.data -1)**2)</code></pre>\n What is the output of `print(b.grad)`?"
 prompt.choices = [
     "`tensor([0., 0., 0., 8., 0.])`",
     "`tensor([0., 0., 0., 16., 0.])`"
