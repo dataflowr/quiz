@@ -12,7 +12,7 @@ context = """
 
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "We continue with <pre><code class=\"language-python\"> $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) </code></pre>\n What is the output of `print(a)`?"
+prompt.prompt = "We run the following code: <pre><code class=\"language-python\"> $ a = np.ones(5) \n$ b = torch.from_numpy(a) \n$ torch.cuda.is_available() \nTrue \n$ device = torch.device('cuda') \n$ b.to(device) </code></pre>\n We continue with <pre><code class=\"language-python\"> $ b = b.to(device) \n$ b[0] = 2 \n$ print(b) \n tensor([2., 1., 1., 1., 1.], device='cuda:0', dtype=torch.float64) </code></pre>\n What is the output of `print(a)`?"
 prompt.choices = [
   "`[2., 1., 1., 1., 1.]`",
   "`[1., 1., 1., 1., 1.]`"
